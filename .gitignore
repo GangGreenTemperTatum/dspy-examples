@@ -1,0 +1,70 @@
+# Ignore macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails and metadata
+Icon?
+._*
+
+# macOS Finder attributes
+.Spotlight-V100
+.Trashes
+.Dfseventsd
+.VolumeIcon.icns
+
+# Ignore Python virtual environments
+env/
+.venv/
+
+# Ignore logs
+error_log.txt
+*.log
+
+# Development directory
+dev/
+
+# Temporary files and backups
+*.swp
+*.swo
+*.bak
+*.tmp
+*.temp
+~$*
+
+# Ignore compiled files and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# macOS-specific files for Git
+.git/
+.gitignore
+
+# Ignore IDE and editor files
+.idea/
+*.iml
+.vscode/
+*.code-workspace
+
+# Ignore compressed and archive files
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.bz2
+*.xz
+*.rar
+
+# Ignore system backup files
+*.bak
+*.old
+
+# Ignore environment variable files
+*.env
+.env.*
