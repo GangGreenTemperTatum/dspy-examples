@@ -2,6 +2,19 @@
 
 This repository contains practical examples of using DSPy for AI-powered code analysis and security evaluation.
 
+- [DSPy Examples](#dspy-examples)
+  - [Projects](#projects)
+    - [Security Code Evaluator Agent](#security-code-evaluator-agent)
+      - [Usage](#usage)
+      - [Output Format](#output-format)
+      - [Example Output](#example-output)
+    - [GitHub Security Diff Evaluator](#github-security-diff-evaluator)
+      - [Usage](#usage-1)
+      - [Output Format](#output-format-1)
+    - [Bandit CTF Solver](#bandit-ctf-solver)
+      - [Features](#features)
+      - [Usage](#usage-2)
+
 ## Projects
 
 ### Security Code Evaluator Agent
@@ -75,5 +88,43 @@ Generates JSONL files in `output/github_diffs/` with detailed analysis:
   "risk_level": "HIGH/MEDIUM/LOW",
   "vulnerabilities": ["list", "of", "vulnerabilities"],
   "recommendations": ["security", "recommendations"]
+}
+```
+
+### Bandit CTF Solver
+Located in [`bandit_ctf_solver.py`](bandit_ctf_solver.py), this tool:
+- Automates solving OverTheWire Bandit CTF challenges
+- Uses LLM-powered command generation via DSPy
+- Maintains progress and discovered passwords between sessions
+- Handles SSH connections and command execution asynchronously
+
+#### Features
+- Automatic level progression
+- AI-driven command generation
+- Progress persistence
+- Pattern-based password detection
+- Detailed execution logging
+
+#### Usage
+```bash
+# Install required packages
+pip install dspy-ai asyncssh litellm
+
+# Start Ollama and pull the LLaMA model
+ollama pull llama3.2
+
+# Run the solver
+python dspy_bandit_ctf_solver.py
+```
+
+The tool saves progress in the following format:
+
+```json
+{
+  "current_level": 1,
+  "passwords": {
+    "bandit0": "bandit0",
+    "bandit1": "discovered_password"
+  }
 }
 ```

@@ -69,3 +69,4 @@ yarn-error.log
 *.env
 .env.*
 output/github_diffs/GangGreenTemperTatum_DOMspy_v1.0.0_to_v1.0.1.jsonl
+ctf_progress.json
