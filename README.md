@@ -44,3 +44,36 @@ The tool generates two files in the `datasets/` directory:
   "verdict": "INSECURE - Contains SQL injection vulnerability"
 }
 ```
+
+### GitHub Security Diff Evaluator
+Located in `github_security_diff_evaluator.py`, this tool:
+- Analyzes security implications of code changes between GitHub releases
+- Uses GitHub API to fetch commit information and diffs
+- Evaluates each changed file for potential security risks
+- Tracks commit authors and metadata
+- Provides risk levels and recommendations
+
+#### Usage
+```bash
+# Set your GitHub token
+export GITHUB_TOKEN='your-token-here'
+
+# Run the analysis
+python github_security_diff_evaluator.py
+```
+
+#### Output Format
+Generates JSONL files in `output/github_diffs/` with detailed analysis:
+```json
+{
+  "sha": "commit-sha",
+  "author": "github-username",
+  "commit_message": "commit message",
+  "date": "2024-01-01T00:00:00Z",
+  "file_path": "path/to/changed/file",
+  "security_analysis": "detailed analysis",
+  "risk_level": "HIGH/MEDIUM/LOW",
+  "vulnerabilities": ["list", "of", "vulnerabilities"],
+  "recommendations": ["security", "recommendations"]
+}
+```
