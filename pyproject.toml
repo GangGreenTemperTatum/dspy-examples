@@ -1,0 +1,48 @@
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "dspy-examples"
+version = "0.1.0"
+description = "DSPy Examples"
+authors = ["Ads Dawson"]
+readme = "README.md"
+packages = [{ include = "dspy_examples" }]
+
+[tool.poetry.dependencies]
+python = ">=3.12, <3.14"
+dspy = ">=2.6.12,<3.0.0"
+mypy = ">=1.15.0,<2.0.0"
+ruff = ">=0.10.0,<0.11.0"
+mlflow = ">=2.20.4,<3.0.0"
+bm25s = ">=0.2.9,<0.3.0"
+pystemmer = ">=2.2.0.3,<3.0.0.0"
+loguru = ">=0.7.3,<0.8.0"
+instructor = ">=1.7.7,<2.0.0"
+jupyter_contrib_nbextensions = ">=0.7.0"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+include = ["*.py", "**/pyproject.toml", "*.ipynb"]
+extend-include = [".hooks/*.py"]
+exclude = ["examples/*", "memory/*", "storage/*"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N"]
+ignore = []
+
+[tool.ruff.lint.isort]
+known-first-party = ["dspy_examples"]
+
+[tool.mypy]
+cache_dir = ".mypy_cache"
+incremental = true
+follow_imports = "silent"
+disallow_untyped_defs = false
