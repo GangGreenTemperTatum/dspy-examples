@@ -5,10 +5,12 @@ from typing import List
 
 # 1. Define signatures
 class GenerateQuery(dspy.Signature):
-    """Generate a search query to find relevant information."""
-    context: str = dspy.InputField()
-    question: str = dspy.InputField()
-    query: str = dspy.OutputField()
+    """Generate a search query that builds upon the context to find new relevant information.
+    The query should be different from previous queries."""
+    context: str = dspy.InputField(desc="Information already gathered")
+    question: str = dspy.InputField(desc="Original question")
+    previous_queries: List[str] = dspy.InputField(desc="Previous search queries made")
+    query: str = dspy.OutputField(desc="A new query that seeks additional information")
 
 class Answer(dspy.Signature):
     """Answer the question based on retrieved passages."""
@@ -31,7 +33,11 @@ class MultiHopRAG(dspy.Module):
 
         for hop in range(self.num_hops):
             # Generate a search query for this hop
-            query_pred = self.generate_query(context="\n".join(context), question=current_question)
+            query_pred = self.generate_query(
+                context="\n".join(context),
+                question=current_question,
+                previous_queries=queries  # Pass the list of previous queries
+            )
             queries.append(query_pred.query)
 
             # Mock retrieval - in a real system, you'd use a retriever
