@@ -42,3 +42,4 @@ inspo:
   - https://x.com/tom_doerr
   - [https://dspy.ai/](https://dspy.ai/)
   - [https://blog.haizelabs.com/posts/dspy/](https://blog.haizelabs.com/posts/dspy/)
+  - DSPy [cheatsheet](https://dspy.ai/cheatsheet)
