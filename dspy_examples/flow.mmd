@@ -1,0 +1,16 @@
+flowchart TD
+    A[Harmful Intent] --> |Input to Attack Generation| B[Attack Model: gemma3:1b]
+    B --> |Generate Attack Prompt| C[Attack Prompt]
+    C --> |Send to Target| D[Target Model: llama3.2]
+    D --> |Generate Response| E[Target Response]
+    E --> |Evaluate with Intent| F[Judge Model: llama3.2]
+    F --> |Score from 0-1| G[Attack Effectiveness Score]
+
+    H[DSPy Evaluation] --> |Uses Metric| G
+    G --> |Feedback for Optimization| I[MIPROv2 Optimizer]
+    I --> |Improves| B
+
+    C --> |Iterative Refinement| J[Refine Signature]
+    E --> |Input to Refinement| J
+    J --> |Critique| K[Updated Critique]
+    K --> |Feedback to Attack Generator| B

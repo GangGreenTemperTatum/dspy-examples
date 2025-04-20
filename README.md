@@ -3,12 +3,13 @@
 This repository contains practical examples of using DSPy for AI-powered code analysis and security evaluation.
 
 - [DSPy Examples](#dspy-examples)
-  - [Process](#process)
-  - [Setup](#setup)
-    - [Troubleshooting](#troubleshooting)
-  - [References](#references)
+- [Process](#process)
+- [Setup](#setup)
+  - [Troubleshooting](#troubleshooting)
+    - [Troubleshooting Ollama](#troubleshooting-ollama)
+- [References](#references)
 
-## Process
+# Process
 
 1. Program
 
@@ -24,7 +25,7 @@ This repository contains practical examples of using DSPy for AI-powered code an
 3. Optimize:
    1. Tune the things
 
-## Setup
+# Setup
 
 To run the notebooks efficiently, I recommend using the `uv` tool to create a virtual environment and install the required packages.
 
@@ -40,7 +41,7 @@ rm uv.lock
 uv lock
 ```
 
-### Troubleshooting
+## Troubleshooting
 
 Need to install the `ipykernel` package to run Jupyter notebooks?
 
@@ -50,7 +51,16 @@ uv pip install --upgrade jupyter ipywidgets
 jupyter nbextension enable --py widgetsnbextension
 ```
 
-## References
+### Troubleshooting Ollama
+
+```bash
+# show running models
+ollama ps
+# stop all running models
+ollama ps | awk 'NR>1 {print $1}' | xargs -n1 ollama stop
+```
+
+# References
 
 Inspiration:
   - https://x.com/tom_doerr

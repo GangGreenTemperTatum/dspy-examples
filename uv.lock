@@ -603,7 +603,7 @@ wheels = [
 
 [[package]]
 name = "dspy"
-version = "2.6.18"
+version = "2.6.13"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anyio" },
@@ -617,21 +617,19 @@ dependencies = [
     { name = "json-repair" },
     { name = "litellm" },
     { name = "magicattr" },
-    { name = "numpy" },
     { name = "openai" },
     { name = "optuna" },
     { name = "pandas" },
     { name = "pydantic" },
     { name = "regex" },
     { name = "requests" },
-    { name = "rich" },
     { name = "tenacity" },
     { name = "tqdm" },
     { name = "ujson" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/03/a7/a7fa83dd00581f466f1ceb350c45aad807d2e9eb5e8fc2a1eff5bde0f7a2/dspy-2.6.18.tar.gz", hash = "sha256:00a1d6516f2f12fc33513bedc5146106914ab428c99c6abc9295bf7fabffa07b", size = 210536 }
+sdist = { url = "https://files.pythonhosted.org/packages/2c/37/3e6c6929a39ef96ce20f2eb3773f2743267c52f02e55059b1f11bef40ebf/dspy-2.6.13.tar.gz", hash = "sha256:66aa1919364f631ee48abad8e9c387d83e0884805106b79ec5b22cb023bbaf04", size = 194148 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/9f/9c/49c791180f61c3bec91e154f87c4d4271009913242dc459fab431c48a3f3/dspy-2.6.18-py3-none-any.whl", hash = "sha256:2ce6e6d8ca7b9b74f734efd86ecdb9bc214c81dec6311d485685875b50b6347e", size = 266239 },
+    { url = "https://files.pythonhosted.org/packages/9e/27/2a2832ca6111e219c7bacd15d82fc32b6e77ecabf31a4234e54f131a8e28/dspy-2.6.13-py3-none-any.whl", hash = "sha256:3151dd5125f2db7ab453fa27349262ad3f9602e95d8bdd298b53ec622d4352a3", size = 247632 },
 ]
 
 [[package]]
@@ -649,6 +647,8 @@ dependencies = [
     { name = "mlflow" },
     { name = "mypy" },
     { name = "ollama" },
+    { name = "openai" },
+    { name = "pydantic" },
     { name = "pystemmer" },
     { name = "ruff" },
     { name = "together" },
@@ -659,6 +659,7 @@ requires-dist = [
     { name = "bm25s", specifier = ">=0.2.9,<0.3.0" },
     { name = "dspy", specifier = ">=2.6.12,<3.0.0" },
     { name = "instructor", specifier = ">=1.7.7,<2.0.0" },
+    { name = "instructor", specifier = ">=1.7.9" },
     { name = "ipywidgets", specifier = ">=8.1.6" },
     { name = "jupyter-contrib-nbextensions", specifier = ">=0.7.0" },
     { name = "jupyterlab", specifier = ">=4.4.0" },
@@ -666,6 +667,8 @@ requires-dist = [
     { name = "mlflow", specifier = ">=2.20.4,<3.0.0" },
     { name = "mypy", specifier = ">=1.15.0,<2.0.0" },
     { name = "ollama", specifier = ">=0.4.8" },
+    { name = "openai", specifier = ">=1.75.0" },
+    { name = "pydantic", specifier = ">=2.11.3" },
     { name = "pystemmer", specifier = ">=2.2.0.3,<3.0.0.0" },
     { name = "ruff", specifier = ">=0.10.0,<0.11.0" },
     { name = "together", specifier = ">=1.5.3" },
@@ -2104,7 +2107,7 @@ wheels = [
 
 [[package]]
 name = "openai"
-version = "1.61.0"
+version = "1.75.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anyio" },
@@ -2116,9 +2119,9 @@ dependencies = [
     { name = "tqdm" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/32/2a/b3fa8790be17d632f59d4f50257b909a3f669036e5195c1ae55737274620/openai-1.61.0.tar.gz", hash = "sha256:216f325a24ed8578e929b0f1b3fb2052165f3b04b0461818adaa51aa29c71f8a", size = 350174 }
+sdist = { url = "https://files.pythonhosted.org/packages/99/b1/318f5d4c482f19c5fcbcde190801bfaaaec23413cda0b88a29f6897448ff/openai-1.75.0.tar.gz", hash = "sha256:fb3ea907efbdb1bcfd0c44507ad9c961afd7dce3147292b54505ecfd17be8fd1", size = 429492 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/93/76/70c5ad6612b3e4c89fa520266bbf2430a89cae8bd87c1e2284698af5927e/openai-1.61.0-py3-none-any.whl", hash = "sha256:e8c512c0743accbdbe77f3429a1490d862f8352045de8dc81969301eb4a4f666", size = 460623 },
+    { url = "https://files.pythonhosted.org/packages/80/9a/f34f163294345f123673ed03e77c33dee2534f3ac1f9d18120384457304d/openai-1.75.0-py3-none-any.whl", hash = "sha256:fe6f932d2ded3b429ff67cc9ad118c71327db32eb9d32dd723de3acfca337125", size = 646972 },
 ]
 
 [[package]]

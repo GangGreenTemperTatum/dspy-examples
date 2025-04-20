@@ -23,6 +23,9 @@ dependencies = [
     "ollama>=0.4.8",
     "ipywidgets>=8.1.6",
     "jupyterlab>=4.4.0",
+    "instructor>=1.7.9",
+    "pydantic>=2.11.3",
+    "openai>=1.75.0",
 ]
 
 [tool.ruff]
