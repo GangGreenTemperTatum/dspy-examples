@@ -1,10 +1,11 @@
-# DSPy <3 Examples
+# DSPy Examples
 
 This repository contains practical examples of using DSPy for AI-powered code analysis and security evaluation.
 
-- [DSPy \<3 Examples](#dspy-3-examples)
+- [DSPy Examples](#dspy-examples)
   - [Process](#process)
   - [Setup](#setup)
+    - [Troubleshooting](#troubleshooting)
   - [References](#references)
 
 ## Process
@@ -25,12 +26,18 @@ This repository contains practical examples of using DSPy for AI-powered code an
 
 ## Setup
 
-```bash
-uv venv --python 3.12
-source .venv/bin/activate
-uv pip install -e .
-uv pip compile pyproject.toml > uv.lock
+To run the notebooks efficiently, I recommend using the `uv` tool to create a virtual environment and install the required packages.
 
+```bash
+uv sync
+source .venv/bin/activate
+```
+
+### Troubleshooting
+
+Need to install the `ipykernel` package to run Jupyter notebooks?
+
+```bash
 uv pip install ipykernel -U --force-reinstall
 uv pip install --upgrade jupyter ipywidgets
 jupyter nbextension enable --py widgetsnbextension
@@ -38,7 +45,7 @@ jupyter nbextension enable --py widgetsnbextension
 
 ## References
 
-inspo:
+Inspiration:
   - https://x.com/tom_doerr
   - [https://dspy.ai/](https://dspy.ai/)
   - [https://blog.haizelabs.com/posts/dspy/](https://blog.haizelabs.com/posts/dspy/)
