@@ -21,6 +21,8 @@ dependencies = [
     "jupyter_contrib_nbextensions>=0.7.0",
     "together>=1.5.3",
     "ollama>=0.4.8",
+    "ipywidgets>=8.1.6",
+    "jupyterlab>=4.4.0",
 ]
 
 [tool.ruff]

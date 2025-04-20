@@ -33,6 +33,13 @@ uv sync
 source .venv/bin/activate
 ```
 
+To generate a fresh `uv lock` file, run:
+
+```bash
+rm uv.lock
+uv lock
+```
+
 ### Troubleshooting
 
 Need to install the `ipykernel` package to run Jupyter notebooks?
