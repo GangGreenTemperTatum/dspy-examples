@@ -7,6 +7,7 @@ This repository contains practical examples of using DSPy for AI-powered code an
 - [Setup](#setup)
   - [Troubleshooting](#troubleshooting)
     - [Troubleshooting Ollama](#troubleshooting-ollama)
+  - [Publications](#publications)
 - [References](#references)
 
 # Process
@@ -59,6 +60,10 @@ ollama ps
 # stop all running models
 ollama ps | awk 'NR>1 {print $1}' | xargs -n1 ollama stop
 ```
+
+## Publications
+
+- [Hacking LLM applications: In the trenches with DSPy](https://www.bugcrowd.com/blog/hacking-llm-applications-in-the-trenches-with-dspy/) compliments [`bugcrowd_blog.ipynb`](./dspy_examples/bugcrowd_blog.ipynb)
 
 # References
 
